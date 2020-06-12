@@ -1,0 +1,96 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "10.5.0"
+        }
+      }
+    ],
+    ["stage-0"]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "istanbul",
+          {
+            "exclude": ["**/*.test.js"]
+          }
+        ],
+        [
+          "module-resolver",
+          {
+            "alias": {
+              "test": "./src/test",
+              "errors": "./src/errors",
+              "config": "./src/config",
+              "routes": "./src/routes",
+              "controllers": "./src/controllers",
+              "repositories": "./src/repositories",
+              "services": "./src/services",
+              "manager": "./src/manager",
+              "data": "./src/data",
+              "producers": "./src/producers",
+              "templates": "./src/templates",
+              "libs": "./src/libs",
+              "middleware": "./src/middleware",
+              "models": "./src/models",
+              "seeders": "./src/seeders",
+              "validations": "./src/validations",
+              "workers": "./src/workers",
+              "base": "./src/base",
+              "src": "./src"
+            },
+            "cwd": "babelrc"
+          }
+        ],
+        [
+          "transform-runtime",
+          {
+            "polyfill": true,
+            "regenerator": true
+          }
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "alias": {
+              "errors": "./src/errors",
+              "config": "./src/config",
+              "routes": "./src/routes",
+              "controllers": "./src/controllers",
+              "repositories": "./src/repositories",
+              "services": "./src/services",
+              "manager": "./src/manager",
+              "data": "./src/data",
+              "producers": "./src/producers",
+              "templates": "./src/templates",
+              "libs": "./src/libs",
+              "middleware": "./src/middleware",
+              "models": "./src/models",
+              "seeders": "./src/seeders",
+              "validations": "./src/validations",
+              "workers": "./src/workers",
+              "base": "./src/base",
+              "src": "./src"
+            },
+            "cwd": "babelrc"
+          }
+        ],
+        [
+          "transform-runtime",
+          {
+            "polyfill": true,
+            "regenerator": true
+          }
+        ]
+      ]
+    }
+  }
+}

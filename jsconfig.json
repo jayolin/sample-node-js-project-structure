@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"],
+      "test": ["test/*"],
+      "errors": ["errors/*"],
+      "config": ["config/*"],
+      "routes": ["routes/*"],
+      "controllers": ["controllers/*"],
+      "services": ["services/*"],
+      "repositories": ["repositories/*"],
+      "manager": ["manager/*"],
+      "data": ["data/*"],
+      "producers": ["producers/*"],
+      "templates": ["templates/*"],
+      "libs": ["libs/*"],
+      "middleware": ["middleware/*"],
+      "models": ["models/*"],
+      "seeders": ["seeders/*"],
+      "validations": ["validations/*"],
+      "workers": ["workers/*"],
+      "base": ["base/*"]
+    }
+  }
+}
