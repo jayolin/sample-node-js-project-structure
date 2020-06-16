@@ -3,7 +3,7 @@ import HTTP_STATUS from "http-status-codes";
 import moment from "moment";
 
 class SampleController extends BaseController {
-  constructor({ sampleRepository, }) {
+  constructor({ sampleRepository }) {
     super();
     this.sampleRespository = sampleRespository;
   }

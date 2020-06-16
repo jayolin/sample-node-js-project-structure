@@ -5,6 +5,8 @@ import validator from "express-joi-validation";
 import MethodNotAllowedHandler from "middleware/methodNotAllowed";
 import catchErrors from "errors/catchErrors";
 import SampleController from "controllers/SampleController";
+import { SampleSchema } from "../../validations/sample.validation.schema";
+
 let validate = validator({
   passError: true // NOTE: this tells the module to pass the error along for you
 });
@@ -24,6 +26,9 @@ router
       session: false,
       failWithError: true
     }),
+
+    //joi validation
+    validate.body(SampleSchema),
 
     //your other middlewares here
     catchErrors(api("sampleControllerMethod"))
